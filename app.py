@@ -5,15 +5,15 @@ import time
 app = Flask(__name__)
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(16, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
 GPIO.setup(18, GPIO.OUT)
 
 @app.route("/reset")
 def reset():
-  GPIO.output(16, True)
+  GPIO.output(12, True)
   time.sleep(2)
-  GPIO.output(16, False)
-  return "reset" 
+  GPIO.output(12, False)
+  return "resetted" 
   
   
 @app.route("/power")
