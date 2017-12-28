@@ -13,7 +13,7 @@ def reset():
   GPIO.output(16, True)
   time.sleep(2)
   GPIO.output(16, False)
-  return "kapcsol" 
+  return "reset" 
   
   
 @app.route("/power")
