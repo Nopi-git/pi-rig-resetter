@@ -19,7 +19,7 @@ def reset():
 @app.route("/power")
 def power():
   GPIO.output(18, True)
-  time.sleep(1)
+  time.sleep(3)
   GPIO.output(18, False)
   return "power"
   
